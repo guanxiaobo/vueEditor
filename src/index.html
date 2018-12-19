@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑器</title>
+    <link rel="stylesheet" href="//lib.eqh5.com/iconfonts/4.0.2/iconfonts.min.css">
+</head>
+<body>
+    <div id="app"></div>
+    <% for (lib of htmlWebpackPlugin.options.libs) { %>
+        <% if (lib.isAsync) { %>
+            <script src="<%= lib.url %>" async></script>
+            <% } else { %>
+                <script src="<%= lib.url %>"></script>
+                <% } %>
+                    <% } %>
+</body>
+</html>
